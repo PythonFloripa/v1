@@ -4,7 +4,7 @@ set -e
 
 
 echo "Updating remotes..."
-git remote add deploy git@github.com:PythonFloripa/pythonfloripa.github.io.git || echo "Remote deploy already exists:"
+git remote add deploy git@github.com:PythonFloripa/v1.git || echo "Remote deploy already exists:"
 git remote -v
 
 
@@ -16,8 +16,8 @@ eval $(ssh-agent)
 ssh-add deploy_key.pem
 
 echo "Running mkdocs gh-deploy"
-mkdocs gh-deploy --verbose --clean --remote-branch master --remote-name deploy
+mkdocs gh-deploy --verbose --clean --remote-branch main --remote-name deploy
 
 echo "Pushing to master..."
-git push deploy master:master --force
+git push deploy main:main --force
 

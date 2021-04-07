@@ -8,5 +8,5 @@ pages:
 theme_dir: theme
 include_next_prev: false
 include_toc: false
-remote_branch: master
+remote_branch: main
 remote_name: deploy
